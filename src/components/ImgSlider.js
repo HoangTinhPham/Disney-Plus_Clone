@@ -35,7 +35,7 @@ function ImgSlider() {
 export default ImgSlider;
 
 const Carousel = styled(Slider)`
-    margin-top: 20px;
+    margin-top: 90px;
 
     .slick-list {
         overflow: visible;
@@ -66,6 +66,12 @@ const Wrap = styled.div`
         height: 100%;
         box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
         rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+
+        @media screen and (min-width: 280px) and (max-width: 375px) {
+            width: 100%;
+            height: 17vh;
+            object-fit: fill;
+        }
         
         &:hover {
             border-color: rgba(249, 249, 249, 0.8);

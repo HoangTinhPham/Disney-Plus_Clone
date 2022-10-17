@@ -1,7 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    movies: [],
+    popular: [],
+    hollywood: [],
+    newTo: [],
+    kidsTv: [],
+    original: [],
+    trending: [],
 }
 
 const moiveSlice = createSlice({
@@ -9,7 +14,12 @@ const moiveSlice = createSlice({
     initialState,
     reducers: {
         setMovies: (state, action) => {
-            state.movies = action.payload;
+            state.popular = action.payload.popular;
+            state.hollywood = action.payload.hollywood;
+            state.newTo = action.payload.newTo;
+            state.kidsTv = action.payload.kidsTv;
+            state.original = action.payload.original;
+            state.trending = action.payload.trending;
         }
     }
 })
